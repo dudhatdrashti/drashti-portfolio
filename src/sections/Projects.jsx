@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-// import { FaGithub } from "react-icons/fa";
-// import { FiExternalLink } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
+import { FiArrowUpRight, FiExternalLink } from "react-icons/fi";
 import SectionTitle from "../components/SectionTitle";
 import { projects } from "../data/portfolioData";
 
@@ -24,12 +24,13 @@ export default function Projects() {
             transition={{ duration: 0.65, delay: i * 0.08 }}
             whileHover={{ y: -14, rotateX: 4, rotateY: -4 }}
           >
-            <div className="project-visual">
-              <span>
+            <div className={`project-visual project-visual-${i + 1}`}>
+              <span aria-hidden="true">
                 {project.title
-                  .split(" ")
-                  .map((word) => word[0])
+                  .split(/\s+/)
+                  .filter((word) => /^[a-z]/i.test(word))
                   .slice(0, 2)
+                  .map((word) => word[0].toUpperCase())
                   .join("")}
               </span>
             </div>
@@ -45,15 +46,20 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* <div className="project-links">
-                <a href={project.live} target="_blank" rel="noreferrer">
-                  <FiExternalLink size={17} /> Live
-                </a>
-
-                <a href={project.code} target="_blank" rel="noreferrer">
-                  <FaGithub size={17} /> Code
-                </a>
-              </div> */}
+              {(project.live || project.code || project.liveUrl !== undefined || project.sourceUrl !== undefined) && (
+                <div className="project-links">
+                  {(project.live || project.liveUrl !== undefined) && (
+                    <a href={project.liveUrl || project.live || "#"} target="_blank" rel="noreferrer">
+                      <FiExternalLink size={16} /> Live preview
+                    </a>
+                  )}
+                  {(project.code || project.sourceUrl !== undefined) && (
+                    <a href={project.sourceUrl || project.code || "#"} target="_blank" rel="noreferrer">
+                      <FaGithub size={16} /> Source <FiArrowUpRight size={14} />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </motion.article>
         ))}

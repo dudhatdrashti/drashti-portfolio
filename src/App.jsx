@@ -56,8 +56,13 @@ export default function App() {
           <Contact />
         </main>
 
-        <footer>
-          © 2026 Drashti Dudhat. Built with React, CSS and Framer Motion.
+        <footer className="site-footer">
+          <div>
+            <strong>Drashti Dudhat</strong>
+            <span>Frontend Developer</span>
+          </div>
+          <p>© 2026 Drashti Dudhat. Built with React, CSS and Framer Motion.</p>
+          <a href="#home" aria-label="Back to top">Back to top ↑</a>
         </footer>
       </motion.div>
     </>

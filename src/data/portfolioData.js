@@ -40,13 +40,13 @@ export const projects = [
     code: "https://github.com/dudhatdrashti/shopora-E-Commerce-dashboard",
   },
   {
-    title: "Online Shopping Website",
-    type: "HTML + CSS + JavaScript",
+    title: "TripNest – Premium Travel Booking Platform",
+    type: "React.js + Vite + Tailwind CSS + JavaScript",
     desc:
-      "Built a responsive e-commerce website with product listing, shopping cart, user authentication flow and smooth navigation across devices.",
-    tags: ["JavaScript", "HTML", "CSS", "E-commerce"],
-    live: "#",
-    code: "#",
+      "Built a premium travel booking platform with destination discovery, hotel listings, search and advanced filtering, premium hotel cards with ratings, pricing and offers, special offers, responsive layouts, currency and theme controls, and a polished modern UI with smooth interactions.",
+    tags: ["React.js", "Vite", "Tailwind CSS", "JavaScript"],
+    liveUrl: "",
+    sourceUrl: "",
   },
 ];
 

@@ -17,21 +17,17 @@ export default function Hero() {
         transition={{ duration: 0.9 }}
       >
         <motion.div
-          className="pill"
+        className="eyebrow-pill"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.25 }}
         >
-          Available for Frontend Developer Roles
+          <span className="status-dot" /> Available for frontend roles
         </motion.div>
 
-        <h1>
-          Hi, I’m <span>{profile.name}</span>
-          <br />
-          {profile.role}
-        </h1>
+        <h1>Hi, I’m <span>{profile.name}</span><br />a {profile.role.toLowerCase()}.</h1>
 
-        <p>{profile.tagline}</p>
+        <p className="hero-intro">{profile.tagline}</p>
 
         <div className="hero-location">
           <FiMapPin size={18} /> {profile.location}
@@ -72,8 +68,9 @@ export default function Hero() {
           <div className="avatar">DD</div>
         </div>
 
+        <p className="card-kicker">Available for meaningful work</p>
         <h3>{profile.role}</h3>
-        <p>React.js • JavaScript • Tailwind CSS</p>
+        <p>React.js · JavaScript · Tailwind CSS</p>
 
         <div className="mini-grid">
           {stats.map((s) => (

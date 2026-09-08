@@ -31,6 +31,11 @@ export default function About() {
             I am currently pursuing BCA from Silver Oak University and improving
             my skills through real-world projects.
           </p>
+          <div className="about-facts">
+            <div><strong>04+</strong><span>Projects built</span></div>
+            <div><strong>React</strong><span>Core strength</span></div>
+            <div><strong>100%</strong><span>Curiosity driven</span></div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -40,6 +45,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
+          <span className="panel-label">How I can help</span>
           <h3>What I Do</h3>
           <p>
             <span>01.</span> Responsive frontend development

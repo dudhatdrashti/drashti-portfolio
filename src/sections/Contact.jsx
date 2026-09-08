@@ -40,6 +40,7 @@ export default function Contact() {
           <p>
             <FiMapPin /> {profile.location}
           </p>
+          <p className="contact-note">Have a project in mind or an opportunity to discuss? I’d love to hear from you.</p>
         </div>
 
         <div className="contact-actions">
